@@ -1,0 +1,21 @@
+NIXPACKS_BUILD_CMD=composer install && npm install --production &&
+  php artisan optimize && php artisan migrate --force && 
+  php artisan db:seed --class=PacienteSeeder && 
+  php artisan db:seed --class=SuperUserSeeder && 
+  php artisan db:seed --class=PacienteSeeder
+
+
+
+NIXPACKS_BUILD_CMD=php artisan db:seed --class=EspecialidadSeeder && php artisan db:seed --class=RecepcionistaSeeder && npm run 
+
+
+
+
+NIXPACKS_BUILD_CMD=php artisan db:seed --class=EspecialidadSeeder && php artisan db:seed --class=RecepcionistaSeeder && npm run build
+
+
+
+
+
+
+NIXPACKS_BUILD_CMD=php artisan migrate && php artisan db:seed --class=RoleSeeder && php artisan db:seed --class=SuperUserSeeder && php artisan db:seed --class=PacienteSeeder && npm run build
